@@ -2,9 +2,9 @@
 #+AUTHOR: slegetank
 #+OPTIONS: \n:\n
 
-Used to make emacsclient the default editor of MacOS.
+Make emacsclient the default editor of MacOS.
 
-Got from here: https://east.fm/posts/open-with-emacsclient/index.html , and more convenient.
+The ideas are got from here: https://east.fm/posts/open-with-emacsclient/index.html, just to make it more convenient.
 
 * Make
 1. Make a file /usr/local/bin/emacsclient and save the following code in it (May need "chmod +x").
