@@ -1,0 +1,31 @@
+#+TITLE: emacsclient tool
+#+AUTHOR: slegetank
+#+OPTIONS: \n:\n
+
+Used to make emacsclient the default editor of MacOS.
+
+Got from here: https://east.fm/posts/open-with-emacsclient/index.html , and more convenient.
+
+* Make
+1. Make a file /usr/local/bin/emacsclient and save the following code in it (May need "chmod +x").
+   #+BEGIN_SRC shell
+     #!/bin/zsh
+     # Start emacsclient and return immediately.
+
+     /Applications/Emacs.app/Contents/MacOS/bin/emacsclient -n -c "$@"
+   #+END_SRC
+
+2. Make a desktop app with [[https://github.com/sveinbjornt/Platypus][Platypus]] , use the following settings (according to your own need):
+   1. Interface must not be "None" (I don't know why), so "Progress Bar" is the one.
+      [[file:./1.png]]
+
+   2. Check the "Accepts dropped items" and click the "Settings" button, then check as below:
+      [[file:./2.png]]
+
+3. Make it can open the files same of Emacs, use this [[file:./copyDocTypes.py][script]].
+
+* Setup
+Use this [[file:./setup.sh][script]] to copy emacsclient (GUI version) to Applications directory, and apply it to the list of "open with".
+
+* Finally...
+[[file:./3.png]]
