@@ -1,4 +1,4 @@
-#+TITLE: emacsclient tool
+#+TITLE: emacsclient for MacOS
 #+AUTHOR: slegetank
 #+OPTIONS: \n:\n
 
