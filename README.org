@@ -22,7 +22,7 @@ The ideas are got from here: https://east.fm/posts/open-with-emacsclient/index.h
    2. Check the "Accepts dropped items" and click the "Settings" button, then check as below:
       [[file:./2.png]]
 
-3. Make it can open the files same of Emacs, use this [[file:./copyDocTypes.py][script]].
+3. Make it can open the files same with Emacs self, use this [[file:./copyDocTypes.py][script]].
 
 * Setup
 Use this [[file:./setup.sh][script]] to copy emacsclient (GUI version) to Applications directory, and apply it to the list of "open with".
