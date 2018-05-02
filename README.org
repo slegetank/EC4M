@@ -4,9 +4,17 @@
 
 Make emacsclient the default editor of MacOS.
 
+[[file:./3.png]]
+
 The ideas are got from here: https://east.fm/posts/open-with-emacsclient/index.html, just to make it more convenient.
 
-* Make
+* Use
+This may take several seconds:
+#+BEGIN_SRC shell
+  . ./setup.sh
+#+END_SRC
+
+* How (If you want to make it yourself)
 1. Make a file /usr/local/bin/emacsclient and save the following code in it (May need "chmod +x").
    #+BEGIN_SRC shell
      #!/bin/zsh
@@ -22,10 +30,12 @@ The ideas are got from here: https://east.fm/posts/open-with-emacsclient/index.h
    2. Check the "Accepts dropped items" and click the "Settings" button, then check as below:
       [[file:./2.png]]
 
-3. Make it can open the files same with Emacs self, use this [[file:./copyDocTypes.py][script]].
+3. Make it can open the files same with Emacs self, use this [[file:./copyDocTypes.py][script]]; Then copy it to /Applications.
+   #+BEGIN_SRC shell
+     python copyDocTypes.py
+   #+END_SRC
 
-* Setup
-Use this [[file:./setup.sh][script]] to copy emacsclient (GUI version) to Applications directory, and apply it to the list of "open with".
-
-* Finally...
-[[file:./3.png]]
+4. Use the following command to apply the system config:
+#+BEGIN_SRC shell
+  "/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister" -lint -kill -r -domain local -domain system -domain user
+#+END_SRC
